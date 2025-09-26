@@ -3,7 +3,8 @@
 int main()
 {
 	try {
-		// your code
+		if (true) then cout << "Success!\n";
+		else cout << "Fail!\n";
 	}
 	catch (exception& e) {
 		cerr << "error: " << e.what() << '\n';
