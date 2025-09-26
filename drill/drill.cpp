@@ -3,7 +3,9 @@
 int main()
 {
 	try {
-		// your code
+		int i = 0;
+		while (i < 10) ++j;
+		if (j < i) cout << "Success!\n";
 	}
 	catch (exception& e) {
 		cerr << "error: " << e.what() << '\n';
