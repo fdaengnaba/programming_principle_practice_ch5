@@ -3,7 +3,9 @@
 int main()
 {
 	try {
-		// your code
+		vector<char> v(5);
+		for (int i = 0; i <= v.size(); ++i)
+			cout << "Success!\n";
 	}
 	catch (exception& e) {
 		cerr << "error: " << e.what() << '\n';
