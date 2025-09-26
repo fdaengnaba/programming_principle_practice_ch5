@@ -4,7 +4,7 @@ int main()
 {
 	try {
 		string s = "Success!\n";
-		for (int i = 0; i < 6; ++i) cout << s[i];
+		for (int i = 0; i < s.size(); ++i) cout << s[i];
 	}
 	catch (exception& e) {
 		cerr << "error: " << e.what() << '\n';
