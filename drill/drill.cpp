@@ -4,7 +4,7 @@ int main()
 {
 	try {
 		string s = "ape";
-		if (s == "fool") cout << "Success!\n";
+		if (s == "ape") cout << "Success!\n";
 	}
 	catch (exception& e) {
 		cerr << "error: " << e.what() << '\n';
