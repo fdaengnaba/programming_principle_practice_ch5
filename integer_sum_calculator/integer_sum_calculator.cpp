@@ -36,6 +36,11 @@ int main() {
 		sum += numbers[i];
 	}
 
+	if (sum > std::numeric_limits<int>::max() || sum < std::numeric_limits<int>::min()) {
+		print_error("The calculated sum (" + std::to_string(sum) + ") is too large to be represented as a standard integer.");
+		return 1;
+	}
+
 	std::cout << "\nThe sum of the first " << n_to_sum << "numbers ( ";
 	for (int i = 0; i < n_to_sum; ++i) {
 		std::cout << numbers[i] << " ";
