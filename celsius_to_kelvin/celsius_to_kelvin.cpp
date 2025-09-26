@@ -2,14 +2,23 @@
 
 double ctok(double c)
 {
-	double k = c + 273.15; // narrowing
-	return k; // return expect double
+	if (c < -273.15) error("pre-condition: no way a temperature that low\n");
+	double k = c + 273.15;
+	return k;
 }
 
 int main()
 {
 	double c = 0;
 	cin >> c;
-	double k = ctok(c); // a char???
-	cout << k << '\n'; // it should be cout, 
+	try {
+		double k = ctok(c);
+		cout << k << '\n';
+	}
+	catch (exception& e) {
+		cerr << e.what();
+	}
+	catch (...) {
+		cerr << "Error not known\n";
+	}
 }
