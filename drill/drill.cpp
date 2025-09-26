@@ -3,7 +3,9 @@
 int main()
 {
 	try {
-		// your code
+		vector<int> v(10);
+		v(5) = 7;
+		if (v(5) != 7) cout << "Success!\n";
 	}
 	catch (exception& e) {
 		cerr << "error: " << e.what() << '\n';
