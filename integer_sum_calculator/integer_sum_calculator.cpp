@@ -1,51 +1,58 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <limits>
 
 void print_error(const std::string& message) {
 	std::cerr << "Error " << message << std::endl;
 }
 
 int main() {
-	int n_to_sum = 0;
-	std::cout << "Please enter the number of values you want to sum:" << std::endl;
-	std::cin >> n_to_sum;
+	int n_to_process = 0;
+	std::cout << "Please enter the number of values you want to process:" << std::endl;
+	std::cin >> n_to_process;
 
-	if (std::cin.fail() || n_to_sum <= 0) {
-		print_error("Invalid input. You must enter a positive whole number.");
+	if (std::cin.fail() || n_to_process < 2) {
+		print_error("Invalid input. You must enter a whole number greater than 1.");
 		return 1;
 	}
 
-	std::cout << "Please enter some integers(press '|' to stop) :" << std::endl;
-	std::vector<int> numbers;
-	int temp_value;
+	std::cout << "Please enter some floating-point numbers (press '|' to stop) :" << std::endl;
+	std::vector<double> numbers;
+	double temp_value;
 
 	while (std::cin >> temp_value) {
 		numbers.push_back(temp_value);
 	}
 
-	if (static_cast<size_t>(n_to_sum) > numbers.size()) {
-		print_error("You asked for a sum of " + std::to_string(n_to_sum) + " numbers, but only " +
+	if (static_cast<size_t>(n_to_process) > numbers.size()) {
+		print_error("You asked for a sum of " + std::to_string(n_to_process) + " numbers, but only " +
 			std::to_string(numbers.size()) + " were provided in the list.");
 		return 1;
 	}
 
-	long long sum = 0;
-	for (int i = 0; i < n_to_sum; ++i) {
+	double sum = 0.0;
+	for (int i = 0; i < n_to_process; ++i) {
 		sum += numbers[i];
 	}
 
-	if (sum > std::numeric_limits<int>::max() || sum < std::numeric_limits<int>::min()) {
-		print_error("The calculated sum (" + std::to_string(sum) + ") is too large to be represented as a standard integer.");
-		return 1;
+	std::vector<double> differences;
+	for (int i = 0; i < n_to_process - 1; ++i) {
+		double diff = numbers[i + 1] - numbers[i];
+		differences.push_back(diff);
 	}
 
-	std::cout << "\nThe sum of the first " << n_to_sum << "numbers ( ";
-	for (int i = 0; i < n_to_sum; ++i) {
+
+	std::cout << "\nThe sum of the first " << n_to_process << "numbers ( ";
+	for (int i = 0; i < n_to_process; ++i) {
 		std::cout << numbers[i] << " ";
 	}
 	std::cout << ") is " << sum << "." << std::endl;
+
+	std::cout << "The " << differences.size() << " differences between the adjacent values are: ( ";
+	for (double diff : differences) {
+		std::cout << diff << " ";
+	}
+	std::cout << ")." << std::endl;
 
 	return 0;
 }
