@@ -2,14 +2,14 @@
 
 double ctok(double c)
 {
-	int k = c + 273.15; // narrowing
-	return int; // return expect double
+	double k = c + 273.15; // narrowing
+	return k; // return expect double
 }
 
 int main()
 {
 	double c = 0;
-	cin >> d;
-	double k = ctok("c"); // a char???
-	Cout << k << '\n'; // it should be cout, 
+	cin >> c;
+	double k = ctok(c); // a char???
+	cout << k << '\n'; // it should be cout, 
 }
