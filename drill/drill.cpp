@@ -3,7 +3,8 @@
 int main()
 {
 	try {
-		// your code
+		string s = "Success!\n";
+		for (int i = 0; i < 6; ++i) cout << s[i];
 	}
 	catch (exception& e) {
 		cerr << "error: " << e.what() << '\n';
