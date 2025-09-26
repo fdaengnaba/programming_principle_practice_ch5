@@ -3,7 +3,7 @@
 int main()
 {
 	try {
-		if (true) then cout << "Success!\n";
+		if (true) cout << "Success!\n";
 		else cout << "Fail!\n";
 	}
 	catch (exception& e) {
