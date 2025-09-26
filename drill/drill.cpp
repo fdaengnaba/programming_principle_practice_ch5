@@ -3,7 +3,9 @@
 int main()
 {
 	try {
-		// your code
+		int x = 2000;
+		char c = x;
+		if (c == 2000) cout << "Success!\n";
 	}
 	catch (exception& e) {
 		cerr << "error: " << e.what() << '\n';
