@@ -3,7 +3,7 @@
 int main()
 {
 	try {
-		cout << success << '\n';
+		cout << "success" << '\n';
 	}
 	catch (exception& e) {
 		cerr << "error: " << e.what() << '\n';
