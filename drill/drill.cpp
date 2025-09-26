@@ -4,7 +4,7 @@ int main()
 {
 	try {
 		int x = 2000;
-		char c = x;
+		int c = x;
 		if (c == 2000) cout << "Success!\n";
 	}
 	catch (exception& e) {
