@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "integer_sum_calculator", "i
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fibonacci", "fibonacci\fibonacci.vcxproj", "{52A01DC6-B81A-4D6F-844A-A812ABA4F697}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bulls_cows", "bulls_cows\bulls_cows.vcxproj", "{FF243889-0010-4F54-9835-ED0F1EEFD2BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{52A01DC6-B81A-4D6F-844A-A812ABA4F697}.Release|x64.Build.0 = Release|x64
 		{52A01DC6-B81A-4D6F-844A-A812ABA4F697}.Release|x86.ActiveCfg = Release|Win32
 		{52A01DC6-B81A-4D6F-844A-A812ABA4F697}.Release|x86.Build.0 = Release|Win32
+		{FF243889-0010-4F54-9835-ED0F1EEFD2BD}.Debug|x64.ActiveCfg = Debug|x64
+		{FF243889-0010-4F54-9835-ED0F1EEFD2BD}.Debug|x64.Build.0 = Debug|x64
+		{FF243889-0010-4F54-9835-ED0F1EEFD2BD}.Debug|x86.ActiveCfg = Debug|Win32
+		{FF243889-0010-4F54-9835-ED0F1EEFD2BD}.Debug|x86.Build.0 = Debug|Win32
+		{FF243889-0010-4F54-9835-ED0F1EEFD2BD}.Release|x64.ActiveCfg = Release|x64
+		{FF243889-0010-4F54-9835-ED0F1EEFD2BD}.Release|x64.Build.0 = Release|x64
+		{FF243889-0010-4F54-9835-ED0F1EEFD2BD}.Release|x86.ActiveCfg = Release|Win32
+		{FF243889-0010-4F54-9835-ED0F1EEFD2BD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
