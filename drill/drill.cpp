@@ -3,7 +3,9 @@
 int main()
 {
 	try {
-		// your code
+		string s = "ape";
+		boo c = "fool" < s;
+		if (c) cout << "Success!";
 	}
 	catch (exception& e) {
 		cerr << "error: " << e.what() << '\n';
