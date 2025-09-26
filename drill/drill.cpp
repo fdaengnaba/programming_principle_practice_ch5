@@ -3,7 +3,9 @@
 int main()
 {
 	try {
-		// your code
+		int x = 2;
+		double d = 5 / (x - 2);
+		if (d == 2 * x + 0.5) cout << "Success!\n";
 	}
 	catch (exception& e) {
 		cerr << "error: " << e.what() << '\n';
