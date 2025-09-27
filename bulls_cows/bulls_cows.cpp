@@ -69,8 +69,33 @@ int main()
 
 	while (bulls != 4)
 	{
+		std::vector<int> userGuess = getUserGuess();
+		bulls = 0;
+		int cows = 0;
 
+		for (int i = 0; i < 4; ++i)
+		{
+			if (userGuess[i] == secretNumber[i])
+			{
+				bulls++;
+			}
+			else
+			{
+				for (int j = 0; j < 4; ++j)
+				{
+					if (userGuess[i] == secretNumber[j])
+					{
+						cows++;
+						break;
+					}
+				}
+			}
+		}
+		std::cout << bulls << " bull(s) and " << cows << " cow(s)." << std::endl << std::endl;
 	}
+	std::cout << "Congratulations! You've guessed the number correctly!" << std::endl;
+
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
