@@ -58,7 +58,19 @@ std::vector<int> getUserGuess()
 
 int main()
 {
-	std::cout << ""
+	std::cout << "--- Welcome to Bulls and Cows! ---" << std::endl;
+	std::cout << "I have a 4-digit number with unique digits. Try to guess it." << std::endl;
+	std::cout << "I'll give you hints with 'bulls' and 'cows'." << std::endl;
+	std::cout << "A 'bull' means you have a correct digit in the correct position." << std::endl;
+	std::cout << "A 'cow' means you have a correct digit in the wrong position." << std::endl;
+
+	std::vector<int> secretNumber = generateSecretNumber();
+	int bulls = 0;
+
+	while (bulls != 4)
+	{
+
+	}
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
