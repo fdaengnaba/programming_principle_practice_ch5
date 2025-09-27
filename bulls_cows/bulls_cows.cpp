@@ -56,7 +56,7 @@ std::vector<int> getUserGuess()
 }
 
 
-int main()
+void playGame()
 {
 	std::cout << "--- Welcome to Bulls and Cows! ---" << std::endl;
 	std::cout << "I have a 4-digit number with unique digits. Try to guess it." << std::endl;
@@ -94,8 +94,19 @@ int main()
 		std::cout << bulls << " bull(s) and " << cows << " cow(s)." << std::endl << std::endl;
 	}
 	std::cout << "Congratulations! You've guessed the number correctly!" << std::endl;
+}
 
-	return 0;
+int main()
+{
+	char playAgain = 'y';
+
+	while (playAgain == 'y' || playAgain == 'Y')
+	{
+		playGame();
+
+		std::cout << "\nDo you want to play again? (y/n): ";
+		std::cin >> playAgain;
+	}
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
