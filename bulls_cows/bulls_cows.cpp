@@ -21,7 +21,38 @@ std::vector<int>  generateSecretNumber()
 
 std::vector<int> getUserGuess()
 {
+	std::vector<int> guess;
+	std::string input;
 
+	while (true) {
+		std::cout << "Enter your 4-digit guess: ";
+		std::cin >> input;
+
+		if (input.length() != 4)
+		{
+			std::cout << "Invalid input. Please enter exactly 4 digits." << std::endl;
+			continue;
+		}
+
+		bool isValid = true;
+		guess.clear();
+		for (char c : input)
+		{
+			if (!isdigit(c))
+			{
+				std::cout << "Invalid input. Please enter only digits." << std::endl;
+				isValid = false;
+				break;
+			}
+			guess.push_back(c - '0');
+		}
+
+		if (isValid)
+		{
+			break;
+		}
+	}
+	return guess;
 }
 
 
